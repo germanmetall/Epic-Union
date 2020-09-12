@@ -1,0 +1,225 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Heroes";
+  src: url("Heroes.woff2") format("woff2"), url("Heroes.woff") format("woff");
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.page {
+  display: grid;
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 24px;
+  background: linear-gradient(to bottom, #000000b0, #00000000);
+  transition: 0.75s;
+}
+.header--colored {
+  background: #ffffffcc;
+}
+
+.desktop .navbar {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.desktop .navbar__link {
+  font-family: "Heroes";
+  font-size: 4rem;
+  color: #A34DFF;
+  flex-grow: 1;
+  text-align: center;
+  transition: 0.75s;
+  cursor: pointer;
+}
+.desktop .navbar__link--colored {
+  color: #000;
+}
+.desktop .navbar__link--logo {
+  cursor: auto;
+  text-align: unset;
+  flex-grow: 3;
+}
+.desktop .navbar__link--logo:hover {
+  background: none;
+}
+.desktop .navbar__link--logo img {
+  width: 100px;
+  cursor: pointer;
+}
+.desktop .heading1 {
+  font-size: 9rem;
+  font-family: "Heroes";
+  color: #DADADA;
+}
+.desktop .text {
+  font-size: 4rem;
+  font-family: "Roboto";
+  color: #fff;
+}
+.desktop #test {
+  cursor: pointer;
+  font-family: "Heroes";
+  border: 24px solid #DADADA;
+  color: #fff;
+  border-radius: 64px;
+  font-size: 10rem;
+  padding: 48px 96px;
+}
+.desktop .page.no-gallery {
+  min-height: 60vh;
+  background: linear-gradient(96.44deg, #490F89 0%, #490F89 43.58%, #A34DFF 68.79%, #A34DFF 76.66%, #490F89 100.82%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.desktop .page.no-gallery article {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.desktop .page.no-gallery article ul, .desktop .page.no-gallery article li {
+  font-size: 4rem;
+  color: #fff;
+}
+.desktop .page.no-gallery .svg {
+  cursor: pointer;
+  z-index: 2;
+}
+.desktop .page.no-gallery .svg__arrow {
+  position: absolute;
+}
+.desktop .page.no-gallery .svg__arrow:nth-of-type(1) {
+  left: 48px;
+  transform: rotate(180deg);
+}
+.desktop .page.no-gallery .svg__arrow:nth-of-type(2) {
+  right: 48px;
+}
+.desktop .page.no-gallery .slider {
+  display: grid;
+  grid-template-columns: 100% 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  transform: translateX(50%);
+  transition: 0.75s;
+}
+.desktop .page.no-gallery .slider .slide {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.desktop .page .gallery {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.desktop .page .gallery img {
+  width: 100%;
+}
+.desktop #page1 {
+  width: 100%;
+  height: 90vh;
+  padding: 0 64px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.desktop #page1 div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.desktop #page1 span {
+  font-family: "Heroes";
+  font-size: 8rem;
+  color: #DADADA;
+}
+.desktop #page1 span #epic {
+  color: #A34DFF;
+}
+
+.mobile {
+  display: none;
+}
+.mobile img {
+  max-width: 100vw;
+}
+.mobile .navbar .heading1 {
+  color: #A34DFF;
+}
+.mobile .page.gallery {
+  grid-template-rows: 50% 50%;
+}
+.mobile .page.no-gallery {
+  background: linear-gradient(96.44deg, #490F89 0%, #490F89 43.58%, #A34DFF 68.79%, #A34DFF 76.66%, #490F89 100.82%);
+}
+.mobile .page img {
+  width: 100%;
+}
+.mobile #page1 {
+  padding: 20%;
+  padding-top: 224px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.mobile .heading1 {
+  font-size: 6rem;
+  color: #DADADA;
+  font-family: "Heroes";
+  text-align: center;
+}
+.mobile #test {
+  border: 16px solid #DADADA;
+  border-radius: 48px;
+  margin: 24px 48px;
+}
+
+.footer {
+  display: none;
+  grid-template-columns: repeat(5, 20%);
+}
+
+@media (max-width: 600px) {
+  .mobile {
+    display: grid;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .footer {
+    display: grid;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
